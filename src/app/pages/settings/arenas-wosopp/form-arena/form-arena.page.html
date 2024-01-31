@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dados da Arena</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-row>
+    <ion-col>
+      <ion-input type="text" label="Nome:" labelPlacement="floating"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label>Foto:</ion-label>
+      <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" title="Foto da Arena" />
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label>Avaliação:</ion-label>
+      <app-star-rating></app-star-rating>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button color="success">
+        <ion-icon name="save" slot="start"></ion-icon>
+        Salvar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

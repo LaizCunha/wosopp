@@ -1,0 +1,6 @@
+<div>
+  @for (rating of [1,2,3,4,5]; track rating) {
+    <ion-icon name="star" size="large" (click)="onClickRate(rating)" [style]="{ 'color': getColor(rating) }"
+    ></ion-icon>
+  }
+</div>
