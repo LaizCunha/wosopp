@@ -22,9 +22,9 @@
     <ion-col>
       <ion-label class="d-block">Foto:</ion-label>
       <div class="image-container ion-margin-bottom ion-margin-top">
-        <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" title="Foto da Arena" />
+        <img [src]="photoArena" title="Foto da Arena" />
       </div>
-      <ion-button color="tertiary">
+      <ion-button color="tertiary" (click)="onClickCamera()">
         <ion-icon slot="icon-only" name="camera"></ion-icon>
       </ion-button>
     </ion-col>
@@ -38,7 +38,7 @@
   <ion-row>
     <ion-col>
       <ion-button>
-        <ion-icon name="save" slot="start"></ion-icon>
+        <ion-icon name="save" slot="start" (click)="onClickSave()"></ion-icon>
         Salvar
       </ion-button>
     </ion-col>
