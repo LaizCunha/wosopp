@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { StarRatingComponent } from 'src/app/shared/components/star-rating/star-rating.component';
 import { addIcons } from 'ionicons';
-import { save } from 'ionicons/icons';
+import { camera, cameraOutline, save } from 'ionicons/icons';
 
 @Component({
   selector: 'app-form-arena',
@@ -16,7 +16,7 @@ import { save } from 'ionicons/icons';
 export class FormArenaPage implements OnInit {
 
   constructor() {
-    addIcons({ save })
+    addIcons({ save, cameraOutline, camera })
   }
 
   ngOnInit() {

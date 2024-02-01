@@ -19,7 +19,7 @@ export class StarRatingComponent {
   public ratingChange: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {
-    addIcons({ star })
+    addIcons({ star });
   }
 
   public onClickRate(newRating: number): void {
@@ -39,7 +39,7 @@ export class StarRatingComponent {
         return 'orange';
       case 4:
       case 5:
-        return 'yellow';
+        return '#ffcd00';
       default:
         return 'gray';
     }

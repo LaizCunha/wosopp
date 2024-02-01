@@ -15,8 +15,18 @@
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-label>Foto:</ion-label>
-      <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" title="Foto da Arena" />
+      <ion-textarea label="Endereço:" labelPlacement="floating" [counter]="true" maxlength="200"></ion-textarea>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label class="d-block">Foto:</ion-label>
+      <div class="image-container ion-margin-bottom ion-margin-top">
+        <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" title="Foto da Arena" />
+      </div>
+      <ion-button color="tertiary">
+        <ion-icon slot="icon-only" name="camera"></ion-icon>
+      </ion-button>
     </ion-col>
   </ion-row>
   <ion-row>
@@ -27,7 +37,7 @@
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-button color="success">
+      <ion-button>
         <ion-icon name="save" slot="start"></ion-icon>
         Salvar
       </ion-button>
