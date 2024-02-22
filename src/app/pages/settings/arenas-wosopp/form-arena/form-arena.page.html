@@ -21,10 +21,14 @@
   <ion-row>
     <ion-col>
       <ion-label class="d-block">Foto:</ion-label>
-      <div class="image-container ion-margin-bottom ion-margin-top">
-        <img [src]="photoArena" title="Foto da Arena" />
+      <div class="ion-margin-bottom ion-margin-top">
+        <ion-img [src]="photoArena" title="Foto da Arena"></ion-img>
       </div>
-      <ion-button color="tertiary" (click)="onClickCamera()">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button color="tertiary" (click)="onClickCamera()" >
         <ion-icon slot="icon-only" name="camera"></ion-icon>
       </ion-button>
     </ion-col>
@@ -33,6 +37,16 @@
     <ion-col>
       <ion-label>Avaliação:</ion-label>
       <app-star-rating></app-star-rating>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      Localização da Arena:
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <capacitor-google-map id="map"></capacitor-google-map>
     </ion-col>
   </ion-row>
   <ion-row>
