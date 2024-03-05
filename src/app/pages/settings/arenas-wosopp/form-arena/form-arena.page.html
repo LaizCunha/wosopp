@@ -8,53 +8,50 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-row>
-    <ion-col>
-      <ion-input type="text" label="Nome:" labelPlacement="floating"></ion-input>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-textarea label="Endereço:" labelPlacement="floating" [counter]="true" maxlength="200"></ion-textarea>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-label class="d-block">Foto:</ion-label>
-      <div class="ion-margin-bottom ion-margin-top">
-        <ion-img [src]="photoArena" title="Foto da Arena"></ion-img>
-      </div>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-button color="tertiary" (click)="onClickCamera()" >
-        <ion-icon slot="icon-only" name="camera"></ion-icon>
-      </ion-button>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-label>Avaliação:</ion-label>
-      <app-star-rating></app-star-rating>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      Localização da Arena:
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <capacitor-google-map id="map"></capacitor-google-map>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-button>
-        <ion-icon name="save" slot="start" (click)="onClickSave()"></ion-icon>
-        Salvar
-      </ion-button>
-    </ion-col>
-  </ion-row>
+  <form *ngIf="form" [formGroup]="form">
+    <ion-row>
+      <ion-col>
+        <ion-input formControlName="nome" type="text" label="Nome:" labelPlacement="floating"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label class="d-block">Foto:</ion-label>
+        <div class="ion-margin-bottom ion-margin-top">
+          <ion-img [src]="photoArena" title="Foto da Arena"></ion-img>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="tertiary" (click)="onClickCamera()" >
+          <ion-icon slot="icon-only" name="camera"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Avaliação:</ion-label>
+        <app-star-rating></app-star-rating>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Localização da Arena:
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <capacitor-google-map id="map"></capacitor-google-map>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button>
+          <ion-icon name="save" slot="start" (click)="onClickSave()"></ion-icon>
+          Salvar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>
